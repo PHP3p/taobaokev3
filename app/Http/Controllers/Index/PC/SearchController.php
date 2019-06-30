@@ -56,9 +56,10 @@ class SearchController extends Controller
         $para['page_size'] = self::PAGE_SIZE;
         $title = $request->q.'淘宝天猫优惠券';
         $name = '综合搜索';
+		
         $materialItems = $this->repository->all(['adzone_id' => $this->searchAllAdzonId, 'page_size' => self::PAGE_SIZE, 'q' => $request->q, 'sort' => $sort]);
         $guessYouLikeItems = $this->repository->guessYouLike($this->guessYouLikeAdzoneId, self::GUESS_YOU_LIKE_NUM_RESULT);
-
+//var_dump($materialItems);die;
         return view('pc.search.result_coupons', compact('title', 'name', 'materialItems', 'q', 'para', 'sort', 'guessYouLikeItems'));
     }
 

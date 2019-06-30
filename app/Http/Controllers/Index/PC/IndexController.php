@@ -12,7 +12,7 @@ class IndexController extends Controller
     const PAGE_SIZE_INDEX = 30;
 
     public $repository;
-    public $couponAdzoneId; // 优惠券api获取的数据
+    public $couponAdzoneId; // 优惠券api获取的数据 lipinai_pc首页
     public $guessYouLikeAdzoneId; // 猜你喜欢
 
     public function __construct(IndexService $api)

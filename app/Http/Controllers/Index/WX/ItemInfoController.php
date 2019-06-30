@@ -58,6 +58,7 @@ class ItemInfoController extends Controller
       $allParas = $request->all();
       $couponInfoStr = $request->coupon_info;
       unset($allParas['coupon_info']);
+      unset($allParas['s']);
       $couponLinkPara = (object)$allParas;
       $itemInfo = $this->repository->itemInfo(['num_iids' => $id, 'platform' => '2']);
       $itemInfo == false ? abort(404) : '';

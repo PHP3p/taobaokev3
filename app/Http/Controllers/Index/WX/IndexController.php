@@ -80,13 +80,20 @@ class IndexController extends Controller
     // 子栏目的分类
     public function categorySon($id, $sort = null)
     {
+		
       $goodsCategoryInfo = $this->repository->currentCategoryInfo($id);
+	 
       $topGoodsCategory = $this->repository->topGoodsCategory(['order' => 'desc', 'level' => 1]);
       $upGoodsCategory = $this->repository->topGoodsCategory(['order' => 'desc', 'level' => $goodsCategoryInfo->level]);
+	   
       $title = $this->repository->title($sort, $goodsCategoryInfo->name);
       $currentCouponGetRule = $this->repository->currentCouponGetRule($id);
+	 /*  echo '<pre/>';
+	    	  var_dump($currentCouponGetRule);die; */
       $couponItems = $this->repository->subGoodsCategoryCouponItems($currentCouponGetRule, $sort);
+	
       $subGoodsCategory = $this->repository->subGoodsCategory($id, ['order' => 'desc', 'is_shown' => 1, 'limt' => 8]);
+
       $para = $this->repository->getAjaxPara($goodsCategoryInfo, $sort);
 
       return view('wx.sonGoodsCategory.index', compact('para', 'title', 'id', 'sort', 'couponItems', 'goodsCategoryInfo', 'topGoodsCategory', 'subGoodsCategory', 'upGoodsCategory'));

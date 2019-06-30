@@ -19,16 +19,16 @@ class ItemInfoService extends ItemInfo
           $result = $domain.$linkParaStr;
         }
 
-        // 来自通用搜索api的优惠券参数
+        // 来自通用搜索api的优惠券参数  !empty($paraArr['mt']) &&
         if(
           !empty($paraArr['e']) &&
           !empty($paraArr['app_pvid']) &&
-          !empty($paraArr['ptl']) &&
-          !empty($paraArr['mt']) &&
+          !empty($paraArr['ptl']) &&         
           !empty($paraArr['union_lens'])
         ) {
+		
           $linkParaStr = $this->makeParasToStr($paras);
-          $result = $domain.$linkParaStr;
+          $result = $domain.$linkParaStr.'&mt=1';
         }
 
         return $result;

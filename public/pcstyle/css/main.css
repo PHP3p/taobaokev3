@@ -189,7 +189,7 @@ body
 {
 	/* background-image: url('/pcstyle/images/goods_category_bg.jpg'); */
 	background-color: rgba(0,0,0,0.6);
-	height: 510px;
+	height: 536px;
 	overflow: hidden;
 }
 #banner-box .category ul li
@@ -233,15 +233,15 @@ body
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
-	z-index: 15;
+	background-color: #FFF;
+	z-index:50;
 	display: none;
 }
 #banner-box .content-box .subCategory-box .subCategory
 {
 	display: none;
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	padding: 10px;
 	overflow: hidden;
 }
@@ -313,7 +313,7 @@ body
 #banner-box .banners
 {
 	overflow: hidden;
-	height: 510px;
+	height: 536px;
 }
 #banner-box .banners img
 {
@@ -415,7 +415,7 @@ body
 {
 	display: inline-block;
 	padding-bottom: 4px;
-	height: 19px;
+	height: 26px;
 }
 .coupon-list .item-box .item hr
 {

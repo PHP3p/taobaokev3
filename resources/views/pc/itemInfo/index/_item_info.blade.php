@@ -114,9 +114,11 @@
                     <div class="col-xs-3 text-right ercode">
                         <p class="tips text-center">手机淘宝扫码领券购买</p>
                         @if(empty($couponLink))
-                        <img src="http://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ route('wx.itemInfo.iteminfo', ['id'=>$id]) }}">
+						
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ route('wx.itemInfo.iteminfo', ['id'=>$id]) }}">
                         @else
-                        <img src="http://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $couponLink }}">
+							
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ $couponLink }}">
                         @endif
                     </div>
                 </div>

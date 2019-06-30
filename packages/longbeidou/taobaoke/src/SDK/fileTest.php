@@ -3,8 +3,8 @@
     date_default_timezone_set('Asia/Shanghai'); 
 
     $c = new TopClient;
-    $c->appkey = '12497914';
-    $c->secretKey = '4b0f28396e072d67fae169684613bcd1';
+    $c->appkey = '27450622';
+    $c->secretKey = 'c8fde07c844e2c48d43befeba9720c74';
     // $req = new TradeVoucherUploadRequest;
     // $req->setFileName("example");
     // $req->setFileData("@/Users/xt/Downloads/1.jpg");

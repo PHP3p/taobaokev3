@@ -1,5 +1,23 @@
 <?php
+/*
 
+ $goodsCategory = $this->goodsCategory->optionsForSelect();
+	    foreach ($goodsCategory as $article){
+			
+			if($article->id>11){
+			insert into  taobao_tbk_dg_material_optional (goods_category_id,start_dsr,page_size,page_no,platform,end_tk_rate,start_tk_rate,end_price,start_price,is_overseas,is_tmall,sort,itemloc,cat,q,has_coupon,ip,adzone_id,need_free_shipment,need_prepay,include_pay_rate_30,include_good_rate,include_rfd_rate,npx_level,created_at,updated_at) values 	
+				$sql="({$article->id},5000,20,'',2,'',1234,'',5,false,false,null,null,{$article->id},'{$article->name}',true,null,49812664,false,false,null,null,null,1,'2019-06-24 09:10:55','2019-06-24 09:10:55'),";
+            echo $sql;
+			
+			
+			echo "update  goods_categorys   set image='/upload/images/goodsCategory/2019-06-22/{$article->id}.png' where id={$article->id};";
+			echo '<br/>';
+            }
+        }
+		
+die;
+var_dump($goodsCategory);
+*/
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
@@ -43,8 +61,8 @@ class GoodsCategoryController extends Controller
 
     public function create()
     {
-      $this->isAdmin();
-
+      $this->isAdmin(); 
+	
       $title = '增加栏目分类';
       $options = $this->goodsCategory->optionsForSelect();
 
